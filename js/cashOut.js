@@ -13,5 +13,8 @@ document.getElementById('cash-out-btn').addEventListener('click', function (even
         p.innerText = `cash Out ${cashoutamount} Tk. New Balance ${newBalance}`;
         document.getElementById('feturesId').appendChild(p);
     }
+    else{
+        alert('worng pin please try again')
+    }
 
 })
