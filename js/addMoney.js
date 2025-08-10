@@ -4,6 +4,11 @@ document.getElementById('add-money-btn').addEventListener('click', function(even
     const addMoneyinput = inputValeByid('add-money-amount');
     const addpinNumber = inputValeByid('add-money-pin');
 
+    if(isNaN(addMoneyinput)){
+        alert('Failed to Add money');
+        return;
+    }
+
     if(addpinNumber === 1){
         const Balance = getTextValueId('avaible-balance');
         const newBalance = Balance + addMoneyinput ;

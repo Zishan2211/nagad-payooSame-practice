@@ -3,6 +3,12 @@ document.getElementById('cash-out-btn').addEventListener('click', function (even
 
     const cashoutamount = inputValeByid('cash-out-amount');
     const cashoutpin = inputValeByid('cash-out-pin');
+
+    if(isNaN(cashoutamount)){
+        alert('Failed to Cash out')
+        return;
+    }
+
     if (cashoutpin === 1 ) {
         const Balance = getTextValueId('avaible-balance');
         const newBalance = Balance - cashoutamount;
