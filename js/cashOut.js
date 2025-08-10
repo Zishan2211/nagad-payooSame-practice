@@ -13,6 +13,11 @@ document.getElementById('cash-out-btn').addEventListener('click', function (even
         const Balance = getTextValueId('avaible-balance');
         const newBalance = Balance - cashoutamount;
 
+        if(cashoutamount > Balance){
+            alert('Failed to Cash Out');
+            return;
+        }
+
         document.getElementById('avaible-balance').innerText = newBalance;
 
         const p = document.createElement('p');
